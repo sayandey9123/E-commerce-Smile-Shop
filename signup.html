@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            max-width: 90%;
+            transition: transform 0.3s ease-in-out, opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        .container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.2);
+            outline: none;
+        }
+
+        .btn {
+            background-color: #3498db;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        .link a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+
+        .welcome-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .welcome-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .welcome-container h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+
+        .welcome-container p {
+            font-size: 25px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .watermark img {
+            width: 250px; 
+            height: auto;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .watermark img.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .bg-circles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -2;
+        }
+
+        .bg-circles div {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: animateCircles 15s linear infinite;
+        }
+
+        .bg-circles div:nth-child(1) {
+            width: 150px;
+            height: 150px;
+            background: #3498db;
+            left: 10%;
+            top: 30%;
+            animation-delay: 0s;
+        }
+
+        .bg-circles div:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            background: #2ecc71;
+            left: 70%;
+            top: 10%;
+            animation-delay: 2s;
+        }
+
+        .bg-circles div:nth-child(3) {
+            width: 120px;
+            height: 120px;
+            background: #f39c12;
+            left: 40%;
+            bottom: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes animateCircles {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(-20vw, -20vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-circles">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="welcome-container" id="welcomeMessage">
+        <h1>Welcome to Smile Shop!</h1>
+        <p>Create your account and start shopping with smile.</p>
+    </div>
+
+    <div class="watermark">
+        <img src="images/logo.png" alt="Smile Shop Logo">
+    </div>
+
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <button type="button" class="btn" onclick="saveToLocalStorage()">Sign Up</button>
+        </form>
+        <div class="link">
+            Already have an account? <a href="signin.html">Sign In</a>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('welcomeMessage').classList.add('visible');
+            document.querySelector('.watermark img').classList.add('visible');
+            document.querySelector('.container').classList.add('visible');
+        });
+
+        function saveToLocalStorage() {
+            const username = document.getElementById('username').value;
+            if (username) {
+                localStorage.setItem('username', username); // Save username to localStorage
+                window.location.href = 'welcome.html'; // Redirect to welcome page
+            } else {
+                alert('Please enter a username.');
+            }
+        }
+    </script>
+</body>
+</html>
