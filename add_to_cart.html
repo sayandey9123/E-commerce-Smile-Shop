@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smile Shop - Home</title>
+  <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+  
+   
+    /* HERO */
+    .hero {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    /* FEATURED PRODUCTS */
+    .featured-products {
+      padding: 50px 20px;
+      text-align: center;
+      background: #f9f9f9;
+    }
+    .featured-products h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      justify-content: center;
+    }
+    .product-card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .product-card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .product-card h3 {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .product-card p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .product-card button {
+      padding: 8px 12px;
+      border: none;
+      background: #4facfe;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .product-card button:hover {
+      background: #00c6ff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div id="header">
+        <div class="header_logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="header_list">
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="index.html#features">SHOP</a></li>
+                    <li><a href="add_to_cart.html" class="active">ADD TO CART</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="about.html" >ABOUT US</a></li>
+                    <li><a href="contact_us.html">CONTACT US</a></li>
+                </ul>  
+            </nav>
+            <div class="header_icon">
+                <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+  

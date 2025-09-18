@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Smile Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HERO */
+    .contact-hero {
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 35px;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+    }
+
+    .contact-hero h1 {
+  font-size: 48px;   /* bigger text */
+  font-weight: 800;  /* extra bold */
+  margin-bottom: 15px;
+}
+
+.contact-hero p {
+  font-size: 20px;   /* larger subtitle */
+  font-weight: 600;  /* semi-bold */
+}
+
+    /* CONTACT SECTION */
+    .contact-section {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: -30px;
+    }
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input, 
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+    .contact-form button {
+      padding: 12px;
+      border: none;
+      background: #4facfe;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-form button:hover {
+      background: #00c6ff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+ <header>
+    <div id="header">
+        <div class="header_logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="header_list">
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="index.html#features">SHOP</a></li>
+                    <li><a href="add_to_cart.html">ADD TO CART</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="about.html" >ABOUT US</a></li>
+                    <li><a href="contact_us.html" class="active">CONTACT US</a></li>
+                </ul>  
+            </nav>
+            <div class="header_icon">
+                <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach out to us anytime.</p>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-section">
+    <h2>Get In Touch</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Smile Shop | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>

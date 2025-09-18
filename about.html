@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Smile Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+
+    /* HERO SECTION */
+    .about-hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+    }
+
+    /* ABOUT CONTENT */
+    .about-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 80px 20px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    .about-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .about-section p {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .about-logo {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .about-logo img {
+      width: 150px;
+      height: auto;
+    }
+
+    /* CARDS */
+    .about-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #f3f3f3;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      background: #e2e2e2;
+      transform: translateY(-5px);
+    }
+    .card i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #4facfe;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div id="header">
+        <div class="header_logo">
+            <a href="index.html"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="header_list">
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="index.html" >HOME</a></li>
+                    <li><a href="index.html#features">SHOP</a></li>
+                    <li><a href="add_to_cart.html">ADD TO CART</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="about.html" class="active">ABOUT US</a></li>
+                    <li><a href="contact_us.html">CONTACT US</a></li>
+                </ul>  
+            </nav>
+            <div class="header_icon">
+                <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
+    <h2>Who We Are</h2>
+    <p>
+      At <strong>Smile Shop</strong>, we believe fashion should bring joy and confidence to everyone. 
+      Our mission is to provide high-quality, affordable, and stylish clothing that makes you look and feel amazing every day.
+    </p>
+
+    <!-- LOGO -->
+    <div class="about-logo">
+      <img src="images/logo.png" alt="Smile Shop Logo">
+    </div>
+
+    <!-- CARDS -->
+    <div class="about-cards">
+      <div class="card">
+        <i class="fa-solid fa-bullseye"></i>
+        <h3>Our Mission</h3>
+        <p>Deliver trendy and premium quality products at the best prices, while ensuring customer satisfaction.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Our Team</h3>
+        <p>A passionate group of designers, developers, and dreamers working together to create a great shopping experience.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Our Values</h3>
+        <p>We value trust, quality, and happiness. Every product we sell is chosen to bring a smile to your face.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Smile Shop | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
